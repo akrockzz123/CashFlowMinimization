@@ -57,9 +57,9 @@ class BinaryHeap {
 
         sinkdown(index)
         {   
-            let left =2*index + 1
+            let left =2*index + 1;
 
-            let right = 2*index + 2
+            let right = 2*index + 2;
 
             let largest = index
             let length = this.size();
@@ -79,17 +79,31 @@ class BinaryHeap {
                 let temp = this.heap[largest]
                 this.heap[largest] = this.heap[index]
                 this.heap[index] = temp
-                this.sinkdown(index)
+                this.sinkdown(largest)
             }
         }
     }
 
     let mxheap = new BinaryHeap();
 
+
     mxheap.insert([4,5]);
+    mxheap.map((h) => {
+        console.log(h[0])
+    })
+    mxheap.insert([2,4]);
+    this.map((h) => {
+        console.log(h[0])
+    })
     mxheap.insert([1,3]);
-    mxheap.insert([1,4]);
+    this.map((h) => {
+        console.log(h[0])
+    })
     mxheap.insert([6,1]);
+    this.map((h) => {
+        console.log(h[0])
+    })
+
 
     while(!mxheap.empty())
     {
