@@ -1,2 +1,1 @@
-# CashFlowMinimization
-A web app to minimize transaction among people
+# A machine learning project to show dominant colors in image using k means
